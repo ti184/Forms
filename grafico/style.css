@@ -1,0 +1,207 @@
+/* --- Configurações Gerais e Fontes --- */
+:root {
+    --cor-primaria: #2980b9;
+    --cor-secundaria: #27ae60;
+    --cor-fundo: #f0f2f5;
+    --cor-container: #ffffff;
+    --cor-texto: #333333;
+    --cor-texto-claro: #555555;
+    --sombra: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* --- Layout Principal --- */
+.container {
+    background-color: var(--cor-container);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    max-width: 800px;
+    width: 100%;
+}
+
+.cabecalho {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 20px;
+}
+
+h1 {
+    color: var(--cor-primaria);
+    font-weight: 600;
+}
+
+/* --- Bloco de Instruções --- */
+.instrucoes-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.instrucoes-container h2 {
+    margin-top: 0;
+    color: var(--cor-primaria);
+    font-weight: 500;
+}
+
+.instrucoes-container ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.instrucoes-container li {
+    margin-bottom: 8px;
+    color: var(--cor-texto-claro);
+}
+
+/* --- Formulário e Perguntas --- */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--cor-primaria);
+}
+
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pergunta {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    transition: box-shadow 0.3s;
+}
+
+.pergunta:hover {
+    box-shadow: var(--sombra);
+}
+
+.pergunta p {
+    margin: 0 0 15px 0;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.opcoes-resposta {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.opcoes-resposta label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--cor-texto-claro);
+}
+
+input[type="radio"] {
+    margin-bottom: 5px;
+    accent-color: var(--cor-primaria); /* Muda a cor da bolinha do radio button */
+}
+
+/* --- Botão e Gráfico --- */
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(90deg, var(--cor-secundaria), #2ecc71);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+}
+
+.resultado-container {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Responsividade para Telas Menores --- */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 20px;
+    }
+    .opcoes-resposta {
+        flex-wrap: wrap; /* Permite que as opções quebrem a linha */
+    }
+}
+
+#interpretacaoContainer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #e0e0e0;
+}
+
+#interpretacaoContainer h2 {
+    text-align: center;
+    color: var(--cor-primaria);
+    margin-bottom: 25px;
+}
+
+.interpretacao-eixo {
+    background-color: #f8f9fa;
+    border-left: 5px solid var(--cor-secundaria);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 0 8px 8px 0;
+}
+
+.interpretacao-eixo h3 {
+    margin-top: 0;
+    color: var(--cor-texto);
+    font-weight: 600;
+}
+
+.interpretacao-eixo h4 {
+    color: var(--cor-texto-claro);
+    font-weight: 500;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.interpretacao-eixo p {
+    margin-bottom: 0;
+    line-height: 1.7;
+}

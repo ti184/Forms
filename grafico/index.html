@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa das Sementes da Liderança</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="cabecalho">
+            <h1>Mapa das Sementes da Liderança</h1>
+            <p>Este é um exercício de autoconhecimento para mapear suas competências e percepções sobre liderança. Seja honesto(a) com suas respostas.</p>
+        </header>
+
+        <div class="instrucoes-container">
+            <h2>Como Responder</h2>
+            <p>Para cada afirmação, escolha a nota que melhor reflete sua realidade, onde:</p>
+            <ul>
+                <li><strong>1</strong> = Discordo totalmente / Não corresponde à minha experiência</li>
+                <li><strong>2</strong> = Discordo parcialmente</li>
+                <li><strong>3</strong> = Às vezes</li>
+                <li><strong>4</strong> = Concordo parcialmente</li>
+                <li><strong>5</strong> = Concordo totalmente / Reflete bem a minha experiência</li>
+            </ul>
+        </div>
+
+        <div class="form-group">
+            <label for="nomeUsuario">Seu Nome Completo:</label>
+            <input type="text" id="nomeUsuario" placeholder="Digite seu nome aqui...">
+        </div>
+        
+        <form id="questionarioForm">
+            </form>
+
+        <button id="btnCalcular">Ver meu Resultado</button>
+
+        <div class="resultado-container">
+            <canvas id="graficoRadar"></canvas>
+        </div>
+        <div id="interpretacaoContainer"></div>
+    </div>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
