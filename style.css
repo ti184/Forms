@@ -122,10 +122,10 @@ input[type="text"] {
 
 input[type="radio"] {
     margin-bottom: 5px;
-    accent-color: var(--cor-primaria); /* Muda a cor da bolinha do radio button */
+    accent-color: var(--cor-primaria);
 }
 
-/* --- Botão e Gráfico --- */
+/* --- Botões e Gráfico --- */
 button {
     display: block;
     width: 100%;
@@ -138,12 +138,19 @@ button {
     font-weight: 600;
     cursor: pointer;
     margin-top: 20px;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
 }
 
 button:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+}
+
+button:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
 }
 
 .resultado-container {
@@ -152,19 +159,6 @@ button:hover {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-}
-
-/* --- Responsividade para Telas Menores --- */
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-    .container {
-        padding: 20px;
-    }
-    .opcoes-resposta {
-        flex-wrap: wrap; /* Permite que as opções quebrem a linha */
-    }
 }
 
 #interpretacaoContainer {
@@ -204,4 +198,33 @@ button:hover {
 .interpretacao-eixo p {
     margin-bottom: 0;
     line-height: 1.7;
+}
+
+/* --- Estilos para a funcionalidade de PDF --- */
+#relatorioCompleto {
+    background-color: #ffffff; 
+    /* O padding é removido daqui e adicionado ao container principal para não duplicar espaço */
+}
+
+#btnBaixarPDF {
+    display: none; /* Começa escondido */
+    background: linear-gradient(90deg, #8e44ad, #9b59b6);
+    margin-top: 15px; 
+}
+
+#btnBaixarPDF:hover {
+    box-shadow: 0 6px 20px rgba(142, 68, 173, 0.4);
+}
+
+/* --- Responsividade --- */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 20px;
+    }
+    .opcoes-resposta {
+        flex-wrap: wrap; 
+    }
 }
